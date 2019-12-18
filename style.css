@@ -1,0 +1,96 @@
+.pmccoin-confirm-payment-popup__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999999;
+	background-color: rgba(0,0,0,0.5);
+	transition: all .1s ease-in-out;
+}
+.pmccoin-confirm-payment-popup {
+	background-color:
+	#fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 2rem;
+	border-radius: 6px;
+	text-align: center;
+	max-width: 90vw;
+	width: 500px;
+	max-height: 90vh;
+}
+.pmccoin-confirm-payment-popup__container.hidden {
+	background-color: rgba(0,0,0,0);
+	z-index: -1;
+}
+.pmccoin-confirm-payment-popup__container.hidden .pmccoin-confirm-payment-popup {
+	display: none;
+}
+.pmccoin-confirm-payment-popup__icon {
+	display: inline-block;
+	margin-bottom: 0.625rem;
+}
+.pmccoin-confirm-payment-popup__title {
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	color: #545657 !important;
+	margin-bottom: 0.625rem;
+	line-height: 2rem;
+}
+.pmccoin-confirm-payment-popup__price {
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	color: #545657;
+	font-size: 1.25rem;
+	display: inline-block;
+	margin-bottom: 0.5rem;
+}
+.pmccoin-confirm-payment-popup__message {
+	font-weight: bold;
+	color: #999;
+	margin-bottom: 1.875rem;
+}
+.pmccoin-confirm-payment-popup__button {
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 6px;
+	padding: 0.5rem 1.625rem;
+	border: 2px solid #fff;
+	transition: all .1s ease-in-out;
+}
+.pmccoin-confirm-payment-popup__button--proceed {
+	background-color: #F78503;
+	margin-right: 0.875rem;
+}
+.pmccoin-confirm-payment-popup__button--cancel {
+	background-color: #7AB556;
+}
+.pmccoin-confirm-payment-popup__button:hover,
+.pmccoin-confirm-payment-popup__button:focus {
+	box-shadow: 0 0 0 4px #97bdcd;
+}
+@media screen and (max-width:768px) {
+	.pmccoin-confirm-payment-popup {
+		padding: 1.5rem;
+		overflow-y: scroll;
+	}
+	.pmccoin-confirm-payment-popup__icon {
+		display: none;
+	}
+	.pmccoin-confirm-payment-popup__message {
+		margin-bottom: 1.5rem;
+	}
+	.pmccoin-confirm-payment-popup__button {
+		display: block;
+		width: 100%;
+	}
+	.pmccoin-confirm-payment-popup__button--proceed {
+		margin-right: 0;
+		margin-bottom: 0.5rem;
+	}
+}
+
